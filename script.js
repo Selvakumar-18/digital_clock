@@ -1,7 +1,8 @@
 const hourEl = document.getElementById("hour")
 const minuteEl = document.getElementById("minutes")
 const secondsEl = document.getElementById("seconds")
-const ampmEl = document.getElementById("am")
+const ampmEl = document.getElementById("ampm")
+
 const dateEl = document.getElementById("date")
 const monthEl = document.getElementById("month")
 const YearEl = document.getElementById("year")
@@ -22,7 +23,11 @@ function updateClock(){
 
     let y = new Date().getFullYear()
 
+
+    
+   
     if(h>=12){
+        h=h-12
         ampm="PM"
     }
 
@@ -30,7 +35,7 @@ function updateClock(){
     minuteEl.innerText = m;
     secondsEl.innerText = s;
     ampmEl.innerText = ampm;
-    
+
     dateEl.innerText =d
     monthEl.innerText = mo
     YearEl.innerText =y 
