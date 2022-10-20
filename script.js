@@ -5,6 +5,8 @@ const ampmEl = document.getElementById("am")
 const dateEl = document.getElementById("date")
 const monthEl = document.getElementById("month")
 const YearEl = document.getElementById("year")
+
+
 function updateClock(){
     let h = new Date().getHours()
     
@@ -19,17 +21,16 @@ function updateClock(){
     let mo = new Date().getMonth()
 
     let y = new Date().getFullYear()
-    if(h>12)
-    {
-        h = h-12
-        ampm = "PM"
+
+    if(h>=12){
+        ampm="PM"
     }
 
     hourEl.innerText = h;
     minuteEl.innerText = m;
     secondsEl.innerText = s;
-    ampm.innerText = ampm;
-
+    ampmEl.innerText = ampm;
+    
     dateEl.innerText =d
     monthEl.innerText = mo
     YearEl.innerText =y 
